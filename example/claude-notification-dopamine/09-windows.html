@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - Windows 配置</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas { display: flex; flex-direction: column; justify-content: center; }
+        .top-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, var(--dopa-blue), var(--dopa-purple)); color: #fff;
+            padding: 0.4rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+        }
+        .canvas h2 { font-size: 2.6rem; margin-bottom: 0.5rem; }
+        .canvas > .subtitle { font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .plans { display: flex; flex-direction: column; gap: 1.2rem; }
+        .plan-card {
+            display: flex; align-items: flex-start; gap: 1.2rem;
+            background: #fff; padding: 1.3rem 1.5rem; border-radius: 16px;
+            border: 2px solid var(--card-color); box-shadow: var(--soft-shadow);
+        }
+        .plan-card.p1 { --card-color: var(--dopa-mint); }
+        .plan-card.p2 { --card-color: var(--dopa-purple); }
+        .plan-card.p3 { --card-color: var(--dopa-blue); }
+        .plan-num {
+            background: var(--card-color); color: #fff; width: 36px; height: 36px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.9rem; flex-shrink: 0;
+        }
+        .plan-info { flex: 1; }
+        .plan-info .label { font-weight: 800; font-size: 1.05rem; margin-bottom: 0.2rem; color: var(--dopa-text-main); }
+        .plan-info .desc { font-size: 0.9rem; color: var(--dopa-text-muted); margin-bottom: 0.5rem; }
+        .plan-info .code-block { padding: 0.7rem 1rem; font-size: 0.72rem; margin: 0; line-height: 1.5; }
+        .plan-tag {
+            font-size: 0.7rem; padding: 0.15rem 0.6rem; border-radius: 8px;
+            font-weight: 700; margin-left: 0.5rem;
+        }
+        .tag-easy { background: rgba(87,204,153,0.15); color: var(--dopa-mint); }
+        .tag-rec { background: rgba(252,236,82,0.3); color: #b7791f; }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="top-row">
+        <div class="badge"><i class="fa-brands fa-windows"></i> Windows</div>
+    </div>
+    <h2><i class="fa-brands fa-windows gradient-text-mint-blue"></i> Windows 通知配置</h2>
+    <p class="subtitle">配置结构一样，只需替换 command 部分</p>
+
+    <div class="plans">
+        <div class="plan-card p1">
+            <div class="plan-num">1</div>
+            <div class="plan-info">
+                <div class="label">msg 命令 <span class="plan-tag tag-easy">最简单</span></div>
+                <div class="desc">零依赖，一行搞定，弹出系统消息框</div>
+                <div class="code-block">msg %username% "Claude Code 通知"</div>
+            </div>
+        </div>
+        <div class="plan-card p2">
+            <div class="plan-num">2</div>
+            <div class="plan-info">
+                <div class="label">PowerShell MessageBox <span class="plan-tag tag-rec">⭐ 推荐</span></div>
+                <div class="desc">无需额外文件，直接调用 .NET 弹窗，带图标</div>
+                <div class="code-block">powershell.exe -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Claude Code 通知', 'Notification', 'OK', 'Information')"</div>
+            </div>
+        </div>
+        <div class="plan-card p3">
+            <div class="plan-num">3</div>
+            <div class="plan-info">
+                <div class="label">PowerShell Toast 通知</div>
+                <div class="desc">系统通知横幅样式，类似 macOS 的 display notification</div>
+                <div class="code-block">powershell.exe -ExecutionPolicy Bypass -File C:/Users/你的用户名/AppData/Local/Temp/claude_toast_notify.ps1 -Title 'Claude Code' -Message 'Claude Code needs your attention'</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 73%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="08-trigger.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">9 / 11</div>
+    <a class="nav-btn" href="10-windows-toast.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

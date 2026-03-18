@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 封面</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: radial-gradient(circle at top right, rgba(255, 143, 171, 0.1), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(144, 224, 239, 0.1), transparent 50%);
+        }
+        .tag-pill {
+            background: var(--dopa-yellow); color: var(--dopa-text-main);
+            padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(252, 236, 82, 0.4); margin-bottom: 2rem; transform: rotate(-2deg);
+        }
+        .canvas h1 { font-size: 5rem; line-height: 1.1; margin-bottom: 1.5rem; text-shadow: 3px 3px 0 var(--dopa-blue), 6px 6px 0 var(--dopa-pink); }
+        .canvas > p { font-size: 1.5rem; max-width: 750px; }
+        .author-bar {
+            margin-top: 3rem; display: flex; align-items: center; gap: 10px;
+            font-weight: 700; color: var(--dopa-purple);
+            background: rgba(165, 166, 246, 0.1); padding: 0.8rem 2rem; border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="tag-pill">🔔 实用技巧</div>
+    <h1>Claude Code<br><span class="gradient-text-pink-purple">自定义通知提醒</span></h1>
+    <p>AI 干完活了你可能在刷手机、泡咖啡……怎么让它"喊你回来"？<br>macOS 三种方案 + Windows 配置，总有一款适合你。</p>
+    <div class="author-bar">
+        <i class="fa-solid fa-user-astronaut" style="color: var(--dopa-pink);"></i> 炼书 | macOS & Windows 通知配置指南
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 0%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn disabled"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">1 / 11</div>
+    <a class="nav-btn" href="02-hooks-intro.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

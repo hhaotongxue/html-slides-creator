@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 感谢观看</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: radial-gradient(circle, rgba(252, 236, 82, 0.15) 0%, rgba(255,255,255,0) 70%);
+        }
+        .canvas h1 { font-size: 4rem; margin-bottom: 2rem; color: var(--dopa-purple); }
+        .canvas > p { font-size: 1.5rem; max-width: 800px; margin-bottom: 2rem; }
+        .pick-cards { display: flex; gap: 1.5rem; margin-bottom: 2.5rem; }
+        .pick-card {
+            padding: 1.5rem 2rem; border-radius: 20px; text-align: center;
+            box-shadow: var(--soft-shadow); background: #fff;
+            border: 3px solid var(--card-color); min-width: 220px;
+        }
+        .pick-card i { font-size: 2rem; margin-bottom: 0.8rem; display: block; color: var(--card-color); }
+        .pick-card .label { font-weight: 800; font-size: 1rem; margin-bottom: 0.3rem; color: var(--dopa-text-main); }
+        .pick-card .desc { font-size: 0.9rem; color: var(--dopa-text-muted); margin: 0; }
+        .pick-card.c1 { --card-color: var(--dopa-blue); }
+        .pick-card.c2 { --card-color: var(--dopa-purple); }
+        .pick-card.c3 { --card-color: var(--dopa-pink); }
+        .fun-slogan {
+            font-size: 3.5rem; font-weight: 900;
+            background: linear-gradient(to right, var(--dopa-pink), var(--dopa-yellow), var(--dopa-mint), var(--dopa-blue));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            transform: rotate(-2deg);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: rotate(-2deg) translateY(0); }
+            50% { transform: rotate(-2deg) translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <h1>🎉 选一个配上吧！</h1>
+
+    <div class="pick-cards">
+        <div class="pick-card c1">
+            <i class="fa-solid fa-leaf"></i>
+            <div class="label">佛系开发</div>
+            <p class="desc">偶尔瞄一眼 → 方案一</p>
+        </div>
+        <div class="pick-card c2">
+            <i class="fa-solid fa-headphones"></i>
+            <div class="label">声音提醒</div>
+            <p class="desc">不想被打断 → 方案二</p>
+        </div>
+        <div class="pick-card c3">
+            <i class="fa-solid fa-bullhorn"></i>
+            <div class="label">绝不错过</div>
+            <p class="desc">必须第一时间知道 → 方案三</p>
+        </div>
+    </div>
+
+    <div class="fun-slogan">让 AI 帮你干活，再也不用盯屏幕了 🚀</div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 100%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="10-windows-toast.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">11 / 11</div>
+    <a class="nav-btn disabled"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

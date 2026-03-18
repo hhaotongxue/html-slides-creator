@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - appIcon 的坑</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+        .warn-icon {
+            font-size: 5rem; margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--dopa-yellow), var(--dopa-pink));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .canvas h2 { font-size: 3rem; margin-bottom: 1.5rem; }
+        .canvas h2 span { color: var(--dopa-pink); }
+        .pitfall-box {
+            max-width: 900px; background: linear-gradient(135deg, rgba(255,143,171,0.08), rgba(252,236,82,0.08));
+            border: 3px solid var(--dopa-pink); border-radius: 20px;
+            padding: 2.5rem 3rem; text-align: left; margin-bottom: 2rem;
+        }
+        .pitfall-box p { font-size: 1.2rem; margin: 0 0 1rem 0; }
+        .pitfall-box p:last-child { margin-bottom: 0; }
+        .pitfall-box b { color: var(--dopa-text-main); }
+        .solution-box {
+            max-width: 900px; background: rgba(87, 204, 153, 0.08);
+            border: 3px solid var(--dopa-mint); border-radius: 20px;
+            padding: 2rem 3rem; display: flex; align-items: center; gap: 1.5rem;
+        }
+        .solution-box i { font-size: 2.5rem; color: var(--dopa-mint); flex-shrink: 0; }
+        .solution-box p { font-size: 1.2rem; margin: 0; font-weight: 600; color: var(--dopa-text-main); }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="warn-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+    <h2>关于 <span>-appIcon</span> 的坑</h2>
+
+    <div class="pitfall-box">
+        <p>terminal-notifier 文档里有 <b>-appIcon</b> 参数，但在 <b>macOS Ventura 及以上版本基本失效</b>。</p>
+        <p>macOS 会<b>强制使用发送方 app 的图标并缓存</b>，所以左侧图标始终是终端图标，无论你怎么设置。</p>
+    </div>
+
+    <div class="solution-box">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>替代方案：用 -contentImage 在通知右侧展示自定义图标，这是目前最可行的方式。</p>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 36%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="04-plan2.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">5 / 11</div>
+    <a class="nav-btn" href="06-plan3.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

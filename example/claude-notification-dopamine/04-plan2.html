@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 方案二</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas { display: flex; flex-direction: column; justify-content: center; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--dopa-purple); color: #fff;
+            padding: 0.4rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+            margin-bottom: 1rem; width: fit-content;
+        }
+        .canvas h2 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+        .canvas > .subtitle { font-size: 1.3rem; margin-bottom: 1.5rem; }
+        .steps { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 1.5rem; }
+        .step {
+            display: flex; align-items: flex-start; gap: 1rem;
+            background: rgba(165, 166, 246, 0.06); padding: 1.2rem 1.5rem; border-radius: 16px;
+        }
+        .step-num {
+            background: var(--dopa-purple); color: #fff; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.9rem; flex-shrink: 0;
+        }
+        .step-content { flex: 1; }
+        .step-content .label { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .step-content .code-block { padding: 0.8rem 1.2rem; font-size: 0.85rem; margin-top: 0.5rem; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+        .feat-card {
+            padding: 1.2rem; border-radius: 16px; background: #fff;
+            border: 2px solid var(--feat-color); box-shadow: var(--soft-shadow);
+        }
+        .feat-card h4 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--feat-color); display: flex; align-items: center; gap: 8px; }
+        .feat-card p { font-size: 0.9rem; margin: 0; }
+        .feat-pro { --feat-color: var(--dopa-mint); }
+        .feat-con { --feat-color: var(--dopa-pink); }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="badge"><i class="fa-solid fa-2"></i> 需要安装</div>
+    <h2><i class="fa-solid fa-bell gradient-text-pink-purple"></i> terminal-notifier</h2>
+    <p class="subtitle">增强通知 — 有声音、可自定义图标</p>
+
+    <div class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <div class="label">安装</div>
+                <div class="code-block">brew install terminal-notifier</div>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <div class="label">配置命令</div>
+                <div class="code-block" style="font-size: 0.8rem;">terminal-notifier -title 'Claude Code' -message 'Claude Code needs your attention' -sound default -contentImage ~/.claude/assets/claude-icon.png</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feat-card feat-pro">
+            <h4><i class="fa-solid fa-check"></i> 优点</h4>
+            <p>有声音提醒，不容易错过<br>右侧可展示自定义图标<br>支持点击跳转（-open 参数）</p>
+        </div>
+        <div class="feat-card feat-con">
+            <h4><i class="fa-solid fa-xmark"></i> 缺点</h4>
+            <p>需要 brew 安装<br>左侧图标无法自定义（macOS 限制）<br>通知仍会自动消失</p>
+        </div>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 27%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="03-plan1.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">4 / 11</div>
+    <a class="nav-btn" href="05-plan2-pitfall.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

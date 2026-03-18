@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 方案三（推荐）</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas { display: flex; flex-direction: column; justify-content: center; }
+        .top-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, var(--dopa-pink), var(--dopa-purple)); color: #fff;
+            padding: 0.4rem 1.2rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+        }
+        .rec-tag {
+            background: var(--dopa-yellow); color: var(--dopa-text-main);
+            padding: 0.3rem 1rem; border-radius: 50px; font-weight: 800; font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(252,236,82,0.4);
+        }
+        .canvas h2 { font-size: 2.6rem; margin-bottom: 0.5rem; }
+        .canvas > .subtitle { font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .prep-box {
+            background: rgba(144,224,239,0.08); border-radius: 16px; padding: 1rem 1.5rem;
+            margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem;
+        }
+        .prep-box i { color: var(--dopa-blue); font-size: 1.3rem; }
+        .prep-box .code-block { padding: 0.6rem 1rem; font-size: 0.85rem; margin: 0; flex: 1; }
+        .main-code { margin-bottom: 1.5rem; }
+        .main-code .code-block { font-size: 0.78rem; line-height: 1.5; }
+        .highlights {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+        }
+        .hl-item {
+            text-align: center; padding: 1rem; border-radius: 16px;
+            background: #fff; box-shadow: var(--soft-shadow);
+        }
+        .hl-item i { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+        .hl-item span { font-size: 0.9rem; font-weight: 700; }
+        .sound-list {
+            margin-top: 1.2rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+            justify-content: center;
+        }
+        .sound-label { font-weight: 700; font-size: 0.9rem; color: var(--dopa-text-muted); display: flex; align-items: center; gap: 6px; }
+        .sound-tag {
+            font-family: var(--font-mono); font-size: 0.78rem; padding: 0.25rem 0.7rem;
+            background: rgba(165,166,246,0.1); border-radius: 8px; color: var(--dopa-purple); font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="top-row">
+        <div class="badge"><i class="fa-solid fa-3"></i> 零依赖</div>
+        <div class="rec-tag">⭐ 推荐</div>
+    </div>
+    <h2><i class="fa-solid fa-window-restore gradient-text-pink-purple"></i> osascript display dialog</h2>
+    <p class="subtitle">模态弹窗 — 不点不消失，绝对不会错过</p>
+
+    <div class="prep-box">
+        <i class="fa-solid fa-image"></i>
+        <div class="code-block">mkdir -p ~/.claude/assets && cp your-icon.png ~/.claude/assets/claude-icon.png</div>
+    </div>
+
+    <div class="main-code">
+        <div class="code-block">afplay /System/Library/Sounds/Glass.aiff & osascript -e 'display dialog "Claude Code needs your attention" with title "Claude Code" with icon POSIX file "/Users/你的名字/.claude/assets/claude-icon.png" buttons {"OK"} default button "OK"'</div>
+    </div>
+
+    <div class="highlights">
+        <div class="hl-item">
+            <i class="fa-solid fa-desktop" style="color: var(--dopa-purple);"></i>
+            <span>屏幕中央弹窗</span>
+        </div>
+        <div class="hl-item">
+            <i class="fa-solid fa-palette" style="color: var(--dopa-pink);"></i>
+            <span>自定义图标</span>
+        </div>
+        <div class="hl-item">
+            <i class="fa-solid fa-volume-high" style="color: var(--dopa-mint);"></i>
+            <span>Glass 提示音</span>
+        </div>
+        <div class="hl-item">
+            <i class="fa-solid fa-lock" style="color: var(--dopa-yellow);"></i>
+            <span>不点不消失</span>
+        </div>
+    </div>
+
+    <div class="sound-list">
+        <span class="sound-label"><i class="fa-solid fa-music"></i> 换提示音？</span>
+        <span class="sound-tag">Glass.aiff</span>
+        <span class="sound-tag">Ping.aiff</span>
+        <span class="sound-tag">Hero.aiff</span>
+        <span class="sound-tag">Pop.aiff</span>
+        <span class="sound-tag">Funk.aiff</span>
+        <span class="sound-tag">Purr.aiff</span>
+        <span class="sound-tag">Sosumi.aiff</span>
+        <span class="sound-tag">Submarine.aiff</span>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 45%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="05-plan2-pitfall.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">6 / 11</div>
+    <a class="nav-btn" href="07-compare.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

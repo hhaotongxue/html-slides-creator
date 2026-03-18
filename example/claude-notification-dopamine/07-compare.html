@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 三种方案对比</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas { display: flex; flex-direction: column; justify-content: center; }
+        .canvas h2 { font-size: 2.8rem; margin-bottom: 2.5rem; text-align: center; }
+        .compare-table {
+            width: 100%; border-collapse: separate; border-spacing: 0;
+            border-radius: 20px; overflow: hidden;
+            box-shadow: var(--soft-shadow);
+        }
+        .compare-table th {
+            background: linear-gradient(135deg, var(--dopa-purple), var(--dopa-blue));
+            color: #fff; padding: 1rem 1.2rem; font-size: 1rem; font-weight: 800;
+            text-align: center;
+        }
+        .compare-table th:first-child { text-align: left; }
+        .compare-table td {
+            padding: 0.9rem 1.2rem; font-size: 0.95rem; text-align: center;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .compare-table td:first-child {
+            font-weight: 700; text-align: left; color: var(--dopa-text-main);
+        }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table tr:nth-child(even) { background: rgba(165,166,246,0.04); }
+        .compare-table .yes { color: var(--dopa-mint); font-weight: 700; }
+        .compare-table .no { color: var(--dopa-pink); font-weight: 700; }
+        .compare-table .partial { color: var(--dopa-yellow); font-weight: 700; }
+        .compare-table .col-rec { background: rgba(165,166,246,0.08); }
+        .rec-header { position: relative; }
+        .rec-header::after {
+            content: '⭐推荐'; position: absolute; top: -8px; right: -5px;
+            background: var(--dopa-yellow); color: var(--dopa-text-main);
+            font-size: 0.65rem; padding: 2px 8px; border-radius: 10px; font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <h2>🆚 三种方案对比一览</h2>
+
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>特性</th>
+                <th>方案一<br><small>display notification</small></th>
+                <th>方案二<br><small>terminal-notifier</small></th>
+                <th class="rec-header col-rec">方案三<br><small>display dialog</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i class="fa-solid fa-download" style="color:var(--dopa-blue);"></i> 需要安装</td>
+                <td class="yes">否</td>
+                <td class="no">是（brew）</td>
+                <td class="col-rec yes">否</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-volume-high" style="color:var(--dopa-mint);"></i> 提示音</td>
+                <td class="no">❌</td>
+                <td class="yes">✅</td>
+                <td class="col-rec yes">✅</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-palette" style="color:var(--dopa-purple);"></i> 自定义图标</td>
+                <td class="no">❌</td>
+                <td class="partial">⚠️ 仅右侧</td>
+                <td class="col-rec yes">✅</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-clock" style="color:var(--dopa-pink);"></i> 通知持久性</td>
+                <td>几秒消失</td>
+                <td>几秒消失</td>
+                <td class="col-rec" style="font-weight:700;color:var(--dopa-mint);">不点不消失</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bolt" style="color:var(--dopa-blue);"></i> 打断性</td>
+                <td>低</td>
+                <td>低</td>
+                <td class="col-rec">高</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 55%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="06-plan3.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">7 / 11</div>
+    <a class="nav-btn" href="08-trigger.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

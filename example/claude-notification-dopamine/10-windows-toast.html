@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - Windows Toast 脚本</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;
+            align-content: center;
+        }
+        .left-col h2 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .left-col .subtitle { font-size: 1.1rem; margin-bottom: 1.2rem; }
+        .file-path {
+            display: flex; align-items: center; gap: 8px; font-size: 0.85rem;
+            color: var(--dopa-text-muted); margin-bottom: 0.8rem; font-weight: 600;
+        }
+        .file-path i { color: var(--dopa-blue); }
+        .left-col .code-block { font-size: 0.72rem; line-height: 1.5; padding: 1.2rem; }
+        .right-col h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--dopa-purple); display: flex; align-items: center; gap: 8px; }
+        .matcher-cards { display: flex; flex-direction: column; gap: 0.7rem; }
+        .matcher-card {
+            display: flex; align-items: center; gap: 0.8rem;
+            background: #fff; padding: 0.8rem 1.2rem; border-radius: 12px;
+            border: 2px solid rgba(165,166,246,0.2); box-shadow: var(--soft-shadow);
+        }
+        .matcher-card code {
+            font-family: var(--font-mono); font-size: 0.78rem; background: rgba(165,166,246,0.1);
+            padding: 2px 8px; border-radius: 6px; color: var(--dopa-purple); font-weight: 600;
+            white-space: nowrap;
+        }
+        .matcher-card .msg {
+            font-size: 0.85rem; color: var(--dopa-text-muted); font-weight: 600;
+        }
+        .matcher-card .arrow { color: var(--dopa-mint); font-weight: 800; }
+        .tip-box {
+            margin-top: 1rem; background: linear-gradient(135deg, rgba(252,236,82,0.1), rgba(87,204,153,0.08));
+            padding: 0.8rem 1.2rem; border-radius: 12px; font-size: 0.85rem;
+            display: flex; align-items: center; gap: 8px; color: var(--dopa-text-muted);
+        }
+        .tip-box i { color: var(--dopa-yellow); }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="left-col">
+        <h2><i class="fa-solid fa-file-code gradient-text-mint-blue"></i> Toast 脚本</h2>
+        <p class="subtitle">方案三需要先创建一个 .ps1 脚本文件</p>
+        <div class="file-path">
+            <i class="fa-solid fa-folder-open"></i>
+            C:/Users/你的用户名/AppData/Local/Temp/claude_toast_notify.ps1
+        </div>
+        <div class="code-block"><span class="code-keyword">param</span>(
+    [<span class="code-keyword">string</span>]$Title = <span class="code-string">"Claude Code"</span>,
+    [<span class="code-keyword">string</span>]$Message = <span class="code-string">"通知"</span>
+)
+
+<span class="code-comment"># 加载 Windows Runtime 类型</span>
+[Windows.UI.Notifications.ToastNotificationManager,
+ Windows.UI.Notifications,
+ ContentType = WindowsRuntime] | Out-Null
+
+$template = <span class="code-string">"&lt;toast&gt;&lt;visual&gt;...&lt;/visual&gt;&lt;/toast&gt;"</span>
+
+$xml = New-Object Windows.Data.Xml.Dom.XmlDocument
+$xml.LoadXml($template)
+
+$toast = [Windows.UI.Notifications
+  .ToastNotification]::<span class="code-keyword">new</span>($xml)
+[Windows.UI.Notifications
+  .ToastNotificationManager]
+  ::CreateToastNotifier(<span class="code-string">"Claude Code"</span>)
+  .Show($toast)</div>
+    </div>
+    <div class="right-col">
+        <h3><i class="fa-solid fa-filter"></i> 按 matcher 分别通知</h3>
+        <div class="matcher-cards">
+            <div class="matcher-card">
+                <code>permission_prompt</code>
+                <span class="arrow">→</span>
+                <span class="msg">需要权限批准</span>
+            </div>
+            <div class="matcher-card">
+                <code>idle_prompt</code>
+                <span class="arrow">→</span>
+                <span class="msg">Claude 任务完成</span>
+            </div>
+            <div class="matcher-card">
+                <code>auth_success</code>
+                <span class="arrow">→</span>
+                <span class="msg">认证成功</span>
+            </div>
+            <div class="matcher-card">
+                <code>elicitation_dialog</code>
+                <span class="arrow">→</span>
+                <span class="msg">有新的对话</span>
+            </div>
+        </div>
+        <div class="tip-box">
+            <i class="fa-solid fa-lightbulb"></i>
+            配置多条规则，不同事件显示不同消息，一目了然
+        </div>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 82%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="09-windows.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">10 / 11</div>
+    <a class="nav-btn" href="11-ending.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

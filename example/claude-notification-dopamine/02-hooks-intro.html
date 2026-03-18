@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 前置准备</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: center;
+        }
+        .left-col h2 { font-size: 3.2rem; line-height: 1.2; margin-bottom: 1.5rem; }
+        .left-col h2 span { color: var(--dopa-purple); }
+        .intro-text { font-size: 1.25rem; margin-bottom: 1.5rem; }
+        .tip-box {
+            background: linear-gradient(135deg, rgba(252,236,82,0.15), rgba(87,204,153,0.1));
+            padding: 1.2rem 1.5rem; border-radius: 16px; font-weight: 700; color: var(--dopa-mint);
+            display: flex; align-items: center; gap: 10px; font-size: 1.1rem;
+        }
+        .right-col .code-block { font-size: 0.95rem; }
+        .matcher-list {
+            margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem;
+        }
+        .matcher-list h4 {
+            font-size: 1rem; color: var(--dopa-purple); margin-bottom: 0.3rem;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .matcher-item {
+            display: flex; align-items: center; gap: 8px; font-size: 0.9rem;
+        }
+        .matcher-item code {
+            font-family: var(--font-mono); background: rgba(165,166,246,0.1);
+            padding: 2px 8px; border-radius: 6px; font-size: 0.85rem; color: var(--dopa-purple);
+            font-weight: 600;
+        }
+        .matcher-item span { color: var(--dopa-text-muted); }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="left-col">
+        <h2><i class="fa-solid fa-gear gradient-text-mint-blue"></i> <span>Hooks</span><br>前置准备</h2>
+        <p class="intro-text">Claude Code 支持通过 <b>hooks</b> 配置 Notification 事件，当 AI 需要你注意时自动触发命令。</p>
+        <div class="tip-box">
+            <i class="fa-solid fa-lightbulb" style="color: var(--dopa-yellow);"></i>
+            配置文件路径：~/.claude/settings.json
+        </div>
+        <div class="matcher-list">
+            <h4><i class="fa-solid fa-filter"></i> matcher 通知类型</h4>
+            <div class="matcher-item"><code>permission_prompt</code> <span>需要权限批准时</span></div>
+            <div class="matcher-item"><code>idle_prompt</code> <span>空闲等待输入时</span></div>
+            <div class="matcher-item"><code>auth_success</code> <span>认证成功时</span></div>
+            <div class="matcher-item"><code>elicitation_dialog</code> <span>弹出对话框时</span></div>
+            <div class="matcher-item"><code>""</code> <span>留空 = 所有类型都触发</span></div>
+        </div>
+    </div>
+    <div class="right-col">
+        <div class="code-block"><span class="code-comment">// ~/.claude/settings.json</span>
+{
+  <span class="code-keyword">"hooks"</span>: {
+    <span class="code-keyword">"Notification"</span>: [
+      {
+        <span class="code-keyword">"matcher"</span>: <span class="code-string">""</span>,
+        <span class="code-keyword">"hooks"</span>: [
+          {
+            <span class="code-keyword">"type"</span>: <span class="code-string">"command"</span>,
+            <span class="code-keyword">"command"</span>: <span class="code-string">"你的通知命令"</span>
+          }
+        ]
+      }
+    ]
+  }
+}</div>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 9%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="01-cover.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">2 / 11</div>
+    <a class="nav-btn" href="03-plan1.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

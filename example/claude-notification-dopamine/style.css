@@ -1,0 +1,110 @@
+/* ================= 全局与多巴胺配色定义 ================= */
+:root {
+    --dopa-bg-body: #f0f4f8;
+    --dopa-bg-canvas: #ffffff;
+    --dopa-text-main: #2d3748;
+    --dopa-text-muted: #718096;
+    --dopa-pink: #ff8fab;
+    --dopa-mint: #57cc99;
+    --dopa-purple: #a5a6f6;
+    --dopa-yellow: #fcec52;
+    --dopa-blue: #90e0ef;
+    --font-sans: 'Nunito', 'Noto Sans SC', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --soft-shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+    --candy-border-radius: 24px;
+    --total-slides: 11;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dopa-bg-body);
+    background-image: radial-gradient(var(--dopa-blue) 1px, transparent 1px), radial-gradient(var(--dopa-pink) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    font-family: var(--font-sans);
+    color: var(--dopa-text-main);
+    overflow: hidden;
+    gap: 1.2rem;
+}
+
+/* 画布 - 固定设计尺寸，JS 等比缩放 */
+.canvas {
+    position: relative;
+    width: 1400px;
+    height: 787.5px;
+    background-color: var(--dopa-bg-canvas);
+    border-radius: var(--candy-border-radius);
+    box-shadow: 0 20px 60px rgba(165, 166, 246, 0.2), 0 0 0 1px rgba(255,255,255,0.5) inset;
+    overflow: hidden;
+    padding: 4rem 5rem;
+    box-sizing: border-box;
+    transform-origin: top center;
+}
+
+/* 通用排版 */
+h1, h2, h3, h4 { margin: 0; font-weight: 800; letter-spacing: -0.03em; color: var(--dopa-text-main); }
+p { line-height: 1.7; color: var(--dopa-text-muted); }
+
+.gradient-text-pink-purple {
+    background: linear-gradient(135deg, var(--dopa-pink), var(--dopa-purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.gradient-text-mint-blue {
+    background: linear-gradient(135deg, var(--dopa-mint), var(--dopa-blue));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.gradient-text-yellow-pink {
+    background: linear-gradient(135deg, var(--dopa-yellow), var(--dopa-pink));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* 代码块 */
+.code-block {
+    font-family: var(--font-mono);
+    background: #f8faff;
+    border: 2px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 16px;
+    color: #4a5568;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    box-shadow: var(--soft-shadow);
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.code-keyword { color: var(--dopa-purple); font-weight: bold; }
+.code-string { color: var(--dopa-mint); }
+.code-comment { color: var(--dopa-text-muted); font-style: italic; }
+
+/* ================= 控制栏 ================= */
+.controls-container {
+    display: flex; align-items: center; gap: 2rem;
+    background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem; border-radius: 50px;
+    box-shadow: var(--soft-shadow);
+    border: 1px solid #fff;
+}
+.nav-btn {
+    background: var(--dopa-bg-body); border: none; color: var(--dopa-text-main);
+    width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+    transition: all 0.3s; display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+}
+.nav-btn:hover { background: var(--dopa-purple); color: #fff; transform: scale(1.1); box-shadow: 0 5px 15px rgba(165, 166, 246, 0.4); }
+.nav-btn.disabled { opacity: 0.3; pointer-events: none; }
+.slide-counter { font-family: var(--font-mono); font-weight: 700; color: var(--dopa-text-muted); }
+
+.progress-bar-container {
+    width: 100%; max-width: 1400px; height: 6px; background: rgba(0,0,0,0.05);
+    border-radius: 3px; margin-top: -0.8rem;
+}
+.progress-bar {
+    height: 100%; background: linear-gradient(to right, var(--dopa-mint), var(--dopa-blue), var(--dopa-purple), var(--dopa-pink));
+    border-radius: 3px; transition: width 0.3s ease;
+}

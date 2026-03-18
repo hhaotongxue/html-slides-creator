@@ -1,0 +1,93 @@
+/* ================= 马卡龙/糖果渐变 - 共用样式 ================= */
+:root {
+    --bg-body: #f8f9fa;
+    --bg-canvas: #ffffff;
+    --text-main: #5c5a66;
+    --text-muted: #9e9ca6;
+    --macaron-pink: #ffc2d1;
+    --macaron-blue: #bde0fe;
+    --macaron-mint: #c1fba4;
+    --macaron-purple: #e2d1f9;
+    --macaron-yellow: #fdf5c9;
+    --candy-gradient-1: linear-gradient(135deg, #ffc2d1 0%, #e2d1f9 100%);
+    --candy-gradient-2: linear-gradient(135deg, #bde0fe 0%, #c1fba4 100%);
+    --candy-gradient-3: linear-gradient(to right, #ffc2d1, #fdf5c9, #c1fba4, #bde0fe);
+    --font-sans: 'Nunito', 'Noto Sans SC', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --soft-shadow: 0 15px 35px -5px rgba(92, 90, 102, 0.05);
+    --candy-border-radius: 28px;
+}
+
+body {
+    margin: 0; height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    background-color: var(--bg-body);
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(255, 194, 209, 0.3), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(189, 224, 254, 0.3), transparent 25%);
+    font-family: var(--font-sans); color: var(--text-main);
+    overflow: hidden; gap: 1.2rem;
+}
+
+/* 画布 - 固定设计尺寸 */
+.canvas {
+    position: relative;
+    width: 1400px; height: 787.5px;
+    background-color: var(--bg-canvas);
+    border-radius: var(--candy-border-radius);
+    box-shadow: 0 20px 60px rgba(226, 209, 249, 0.4), 0 0 0 2px rgba(255,255,255,0.8) inset;
+    overflow: hidden;
+    padding: 4rem 5rem; box-sizing: border-box;
+    transform-origin: top center;
+}
+
+/* 通用排版 */
+h1, h2, h3, h4 { margin: 0; font-weight: 800; letter-spacing: -0.02em; color: var(--text-main); }
+p { line-height: 1.8; color: var(--text-muted); }
+
+.text-gradient-candy {
+    background: var(--candy-gradient-1);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.text-gradient-fresh {
+    background: var(--candy-gradient-2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* 代码块 */
+.code-block {
+    font-family: var(--font-mono);
+    background: #fafafc; border: 1px solid rgba(226, 209, 249, 0.5);
+    padding: 1.5rem; border-radius: 20px;
+    color: #6d6b77; font-size: 1.1rem; line-height: 1.6;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+.code-keyword { color: #b19cd9; font-weight: bold; }
+.code-string { color: #82c8a0; }
+.code-comment { color: var(--text-muted); font-style: italic; }
+
+/* ================= 控制栏 ================= */
+.controls-container {
+    display: flex; align-items: center; gap: 2rem;
+    background: #fff; padding: 0.8rem 2rem; border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+.nav-btn {
+    background: transparent; border: none; color: var(--text-muted);
+    width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+    transition: all 0.3s; font-size: 1.2rem;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+}
+.nav-btn:hover { background: var(--bg-body); color: var(--text-main); }
+.nav-btn.disabled { opacity: 0.3; pointer-events: none; }
+.slide-counter { font-family: var(--font-mono); font-weight: 600; color: var(--text-muted); }
+
+.progress-bar-container {
+    width: 1400px; height: 8px; background: #f1f3f5;
+    border-radius: 4px; margin-top: -0.8rem; transform-origin: top center;
+}
+.progress-bar {
+    height: 100%; background: var(--candy-gradient-3);
+    border-radius: 4px;
+}

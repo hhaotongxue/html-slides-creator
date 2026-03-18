@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 通知提醒 - 触发时机</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .canvas h2 { font-size: 3rem; margin-bottom: 2.5rem; text-align: center; }
+        .timeline {
+            display: flex; align-items: flex-start; gap: 0; max-width: 1100px; width: 100%;
+            position: relative;
+        }
+        .timeline::before {
+            content: ''; position: absolute; top: 40px; left: 60px; right: 60px; height: 4px;
+            background: linear-gradient(to right, var(--dopa-mint), var(--dopa-blue), var(--dopa-purple), var(--dopa-pink));
+            border-radius: 2px;
+        }
+        .tl-step {
+            flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;
+            position: relative; z-index: 1;
+        }
+        .tl-icon {
+            width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; color: #fff; box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            margin-bottom: 1.5rem;
+        }
+        .tl-step:nth-child(1) .tl-icon { background: linear-gradient(135deg, var(--dopa-mint), var(--dopa-blue)); }
+        .tl-step:nth-child(2) .tl-icon { background: linear-gradient(135deg, var(--dopa-blue), var(--dopa-purple)); }
+        .tl-step:nth-child(3) .tl-icon { background: linear-gradient(135deg, var(--dopa-purple), var(--dopa-pink)); }
+        .tl-step h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .tl-step p { font-size: 1rem; max-width: 250px; }
+        .note-box {
+            margin-top: 2.5rem; max-width: 900px;
+            background: linear-gradient(135deg, rgba(252,236,82,0.1), rgba(255,143,171,0.08));
+            border: 2px dashed var(--dopa-yellow); border-radius: 16px;
+            padding: 1.5rem 2rem; text-align: left;
+        }
+        .note-box h4 { font-size: 1.1rem; color: #d69e2e; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+        .note-box p { font-size: 1rem; margin: 0; }
+    </style>
+</head>
+<body>
+
+<div class="canvas">
+    <h2><i class="fa-solid fa-clock-rotate-left gradient-text-mint-blue"></i> 触发时机与延迟</h2>
+
+    <div class="timeline">
+        <div class="tl-step">
+            <div class="tl-icon"><i class="fa-solid fa-robot"></i></div>
+            <h4>AI 完成任务</h4>
+            <p>回答完问题、执行完代码、需要你确认等</p>
+        </div>
+        <div class="tl-step">
+            <div class="tl-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+            <h4>等待 30~60 秒</h4>
+            <p>确认你确实没在看屏幕，避免正在操作时打扰你</p>
+        </div>
+        <div class="tl-step">
+            <div class="tl-icon"><i class="fa-solid fa-bell"></i></div>
+            <h4>触发通知</h4>
+            <p>AI 干完活 + 你一段时间没理它 = 弹通知</p>
+        </div>
+    </div>
+
+    <div class="note-box">
+        <h4><i class="fa-solid fa-circle-info"></i> 注意</h4>
+        <p>延迟时间由 Claude Code 内部控制，暂无配置项可调整。持续对话中或执行中间步骤时不会触发。</p>
+    </div>
+</div>
+
+<div class="progress-bar-container">
+    <div class="progress-bar" style="width: 64%;"></div>
+</div>
+
+<div class="controls-container">
+    <a class="nav-btn" href="07-compare.html"><i class="fa-solid fa-chevron-left"></i></a>
+    <div class="slide-counter">8 / 11</div>
+    <a class="nav-btn" href="09-windows.html"><i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+<script src="scale.js"></script>
+</body>
+</html>

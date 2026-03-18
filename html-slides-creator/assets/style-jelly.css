@@ -1,0 +1,114 @@
+/* ================= 果冻弥散光 - 共用样式 ================= */
+:root {
+    --bg-deep: #0f172a;
+    --text-light: #f8fafc;
+    --text-dim: #94a3b8;
+    --jelly-blue: #3b82f6;
+    --jelly-purple: #a855f7;
+    --jelly-pink: #ec4899;
+    --jelly-cyan: #06b6d4;
+    --holographic-gradient: linear-gradient(135deg, #6ee7b7, #3b82f6, #9333ea, #ec4899);
+    --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+    --glass-blur: blur(24px);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --canvas-radius: 32px;
+}
+
+body {
+    margin: 0; height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    background-color: var(--bg-deep);
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.4), transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.4), transparent 40%),
+        radial-gradient(circle at 40% 80%, rgba(168, 85, 247, 0.4), transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(6, 182, 212, 0.3), transparent 50%);
+    background-size: 150% 150%;
+    animation: jellyFlow 20s ease-in-out infinite alternate;
+    font-family: var(--font-sans); color: var(--text-light);
+    overflow: hidden; gap: 1.2rem;
+}
+
+@keyframes jellyFlow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* 画布 - 固定设计尺寸 */
+.canvas {
+    position: relative;
+    width: 1400px; height: 787.5px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow), 0 0 0 1px rgba(255,255,255,0.1) inset;
+    border-radius: var(--canvas-radius);
+    overflow: hidden;
+    padding: 4rem 6rem; box-sizing: border-box;
+    transform-origin: top center;
+}
+
+/* 通用排版 */
+h1, h2, h3, h4 { margin: 0; font-weight: 900; letter-spacing: -0.03em; color: #fff; }
+p { line-height: 1.8; color: var(--text-dim); font-size: 1.2rem; }
+
+.halo-text {
+    background: var(--holographic-gradient);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* 毛玻璃卡片 */
+.glass-panel {
+    background: var(--glass-bg); backdrop-filter: blur(12px);
+    border: var(--glass-border); border-radius: 24px; padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, border-color 0.3s;
+}
+.glass-panel:hover {
+    transform: translateY(-5px); border-color: rgba(255,255,255,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2), 0 0 20px rgba(168, 85, 247, 0.2) inset;
+}
+
+/* 代码块 */
+.code-block {
+    font-family: var(--font-mono);
+    background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem; border-radius: 16px;
+    color: #e2e8f0; font-size: 1.1rem; line-height: 1.6;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+}
+.code-keyword { color: #c084fc; }
+.code-string { color: #6ee7b7; }
+.code-comment { color: #64748b; font-style: italic; }
+
+/* ================= 控制栏 ================= */
+.controls-container {
+    display: flex; align-items: center; gap: 2rem;
+    background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 2.5rem; border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.nav-btn {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+    transition: all 0.3s; display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+}
+.nav-btn:hover { background: var(--jelly-blue); border-color: var(--jelly-blue); box-shadow: 0 0 20px var(--jelly-blue); }
+.nav-btn.disabled { opacity: 0.3; pointer-events: none; }
+.slide-counter { font-family: var(--font-mono); font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 2px; }
+
+.progress-bar-container {
+    width: 1400px; height: 6px; background: rgba(255,255,255,0.1);
+    border-radius: 3px; margin-top: -0.8rem; transform-origin: top center;
+}
+.progress-bar {
+    height: 100%; background: var(--holographic-gradient);
+    border-radius: 3px; box-shadow: 0 -2px 20px var(--jelly-blue), 0 0 10px var(--jelly-purple);
+}

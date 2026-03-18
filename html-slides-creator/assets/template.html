@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <link href="https://fonts.googleapis.com/css2?family={{FONT_FAMILY}}&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 仅本页的布局样式 */
+        {{PAGE_SPECIFIC_STYLES}}
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        {{CONTENT}}
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: {{PROGRESS}}%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn {{PREV_DISABLED}}" href="{{PREV_PAGE}}"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">{{CURRENT}} / {{TOTAL}}</div>
+        <a class="nav-btn {{NEXT_DISABLED}}" href="{{NEXT_PAGE}}"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>
