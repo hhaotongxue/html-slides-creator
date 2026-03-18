@@ -103,29 +103,13 @@ body {
     box-shadow: var(--glass-shadow), 0 0 0 1px rgba(255,255,255,0.1) inset;
     border-radius: var(--canvas-radius);
     overflow: hidden;
-    padding: 3rem 5rem; box-sizing: border-box;
+    padding: 4rem 6rem; box-sizing: border-box;
     transform-origin: top center;
-    display: flex;
-    flex-direction: column;
 }
 
 /* 通用排版 */
 h1, h2, h3, h4 { margin: 0; font-weight: 900; letter-spacing: -0.03em; color: #fff; }
-
-.canvas h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.3rem;
-}
-
-.canvas h2 {
-    font-size: 1.8rem;
-}
-
-.canvas h3 {
-    font-size: 1.4rem;
-}
-
-p { line-height: 1.8; color: var(--text-dim); font-size: 1rem; }
+p { line-height: 1.8; color: var(--text-dim); font-size: 1.2rem; }
 
 .halo-text {
     background: var(--holographic-gradient);
@@ -220,12 +204,11 @@ p { line-height: 1.8; color: var(--text-dim); font-size: 1rem; }
 .card {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
-    padding: 1.5rem;
+    padding: var(--space-lg);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
     transition: all var(--duration-base);
-    flex-shrink: 1;
 }
 .card:hover {
     transform: translateY(-4px);
@@ -236,65 +219,61 @@ p { line-height: 1.8; color: var(--text-dim); font-size: 1rem; }
 .icon-card {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
-    padding: 1.5rem;
+    padding: var(--space-lg);
     border-radius: var(--radius-lg);
     text-align: center;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
-    flex-shrink: 1;
 }
 .icon-card-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
 }
 
 .highlight-card {
     position: relative;
     background: var(--card-bg);
     backdrop-filter: blur(12px);
-    padding: 1.5rem;
+    padding: var(--space-lg);
     border-radius: var(--radius-lg);
     border-left: 4px solid var(--accent-color);
     box-shadow: var(--shadow-sm);
-    flex-shrink: 1;
 }
 
 /* 引用与提示框 */
 .quote-box {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
-    padding: 2rem;
+    padding: var(--space-xl);
     border-radius: var(--radius-lg);
     border-left: 6px solid var(--accent-color);
     font-style: italic;
     box-shadow: var(--shadow-sm);
-    flex-shrink: 1;
 }
 .quote-text {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
     color: var(--text-light);
 }
 .quote-author {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
     color: var(--text-muted);
     font-style: normal;
 }
 
 .callout {
     display: flex;
-    gap: 1rem;
-    padding: 1.2rem;
+    gap: var(--space-md);
+    padding: var(--space-lg);
     border-radius: var(--radius-md);
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
-    flex-shrink: 1;
 }
 .callout-icon {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     flex-shrink: 0;
 }
 .callout-info { border-left: 4px solid #3b82f6; }
@@ -310,13 +289,13 @@ p { line-height: 1.8; color: var(--text-dim); font-size: 1rem; }
 .icon-list li {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 0.6rem 0;
-    font-size: 1rem;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    font-size: var(--text-base);
 }
 .icon-list i {
     color: var(--accent-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .numbered-list {
@@ -328,21 +307,20 @@ p { line-height: 1.8; color: var(--text-dim); font-size: 1rem; }
     counter-increment: item;
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 0.6rem 0;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
 }
 .numbered-list li::before {
     content: counter(item);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 2rem;
+    height: 2rem;
     background: var(--accent-color);
     color: white;
     border-radius: 50%;
     font-weight: 700;
-    font-size: 0.85rem;
     flex-shrink: 0;
     box-shadow: 0 0 15px var(--accent-color);
 }

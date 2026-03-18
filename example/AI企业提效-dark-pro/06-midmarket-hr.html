@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中型公司 - 招聘优化</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .canvas h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .main-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            border: 2px solid rgba(6, 182, 212, 0.4);
+        }
+        .card-title {
+            font-size: 2rem;
+            color: var(--pro-cyan);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .benefit-box {
+            background: rgba(251, 191, 36, 0.1);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .benefit-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        .benefit-value {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--pro-yellow);
+        }
+        .process-list {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .process-item {
+            background: rgba(16, 185, 129, 0.15);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-size: 1.05rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h2><i class="fa-solid fa-chart-line" style="color: var(--pro-cyan); margin-right: 1rem;"></i>中型公司</h2>
+
+        <div class="main-card">
+            <div class="card-title">场景三：招聘与入职流程优化</div>
+
+            <div class="process-list">
+                <div class="process-item">
+                    <i class="fa-solid fa-file-lines" style="color: var(--pro-green); margin-right: 0.5rem;"></i>
+                    简历自动筛选
+                </div>
+                <div class="process-item">
+                    <i class="fa-solid fa-comments" style="color: var(--pro-green); margin-right: 0.5rem;"></i>
+                    AI 初面试
+                </div>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-box">
+                    <div class="benefit-icon">😊</div>
+                    <div class="benefit-label">员工敬业度提升</div>
+                    <div class="benefit-value">75%</div>
+                </div>
+                <div class="benefit-box">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-label">招聘周期缩短</div>
+                    <div class="benefit-value">40%</div>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-dim); font-size: 1.05rem;">
+                人力资源部门（HR）反馈数据
+            </p>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 45.45%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="05-midmarket-marketing.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">6 / 12</div>
+        <a class="nav-btn " href="07-small-ecommerce.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

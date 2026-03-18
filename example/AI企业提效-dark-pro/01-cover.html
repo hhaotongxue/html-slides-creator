@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI企业提效 - 封面</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+        }
+        .tag-pill {
+            background: linear-gradient(135deg, var(--pro-orange), var(--pro-pink));
+            color: white;
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        .canvas h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            margin: 0;
+        }
+        .canvas .subtitle {
+            font-size: 1.8rem;
+            color: var(--text-dim);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="tag-pill">2025-2026 实测数据</div>
+        <h1>AI 企业提效<br><span class="gradient-text-warm">从概念到量化指标</span></h1>
+        <p class="subtitle">不同规模企业的真实应用场景与数据</p>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn disabled" href=""><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">1 / 12</div>
+        <a class="nav-btn " href="02-overview.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

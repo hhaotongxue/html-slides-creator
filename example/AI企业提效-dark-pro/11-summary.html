@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>总结对比表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+        .table-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead {
+            background: rgba(247, 147, 26, 0.15);
+        }
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            border-bottom: 2px solid var(--pro-orange);
+        }
+        td {
+            padding: 1rem;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            line-height: 1.5;
+        }
+        tbody tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .type-cell {
+            font-weight: 700;
+        }
+        tbody tr:nth-child(1) .type-cell { color: var(--pro-orange); }
+        tbody tr:nth-child(2) .type-cell { color: var(--pro-cyan); }
+        tbody tr:nth-child(3) .type-cell { color: var(--pro-green); }
+        tbody tr:nth-child(4) .type-cell { color: var(--pro-pink); }
+        .icon-enterprise { color: var(--pro-orange); }
+        .icon-midmarket { color: var(--pro-cyan); }
+        .icon-small { color: var(--pro-green); }
+        .icon-solo { color: var(--pro-pink); }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1><span class="gradient-text-warm">各级企业 AI 提效核心指标对比</span></h1>
+        <p class="subtitle">2025-2026 年度数据</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">企业类型</th>
+                        <th style="width: 20%;">核心场景</th>
+                        <th style="width: 35%;">关键提效数据</th>
+                        <th style="width: 30%;">核心痛点解决</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="type-cell">
+                            <i class="fa-solid fa-building icon-enterprise"></i> 大型公司
+                        </td>
+                        <td>研发/供应链</td>
+                        <td>工程师效率 <strong style="color: var(--pro-orange);">+20%</strong>; 成本降低 <strong style="color: var(--pro-orange);">15%</strong></td>
+                        <td>打破部门墙，数据孤岛治理</td>
+                    </tr>
+                    <tr>
+                        <td class="type-cell">
+                            <i class="fa-solid fa-chart-line icon-midmarket"></i> 中型公司
+                        </td>
+                        <td>营销/HR</td>
+                        <td>营销速度 <strong style="color: var(--pro-cyan);">+85%</strong>; 收入提振明显</td>
+                        <td>解决专业人力不足</td>
+                    </tr>
+                    <tr>
+                        <td class="type-cell">
+                            <i class="fa-solid fa-store icon-small"></i> 小型企业
+                        </td>
+                        <td>跨境/财务</td>
+                        <td>每月节省 <strong style="color: var(--pro-green);">20+小时</strong>; <strong style="color: var(--pro-green);">$500-$2000</strong> 成本</td>
+                        <td>替代昂贵外包，低成本全球化</td>
+                    </tr>
+                    <tr>
+                        <td class="type-cell">
+                            <i class="fa-solid fa-user icon-solo"></i> 个体户
+                        </td>
+                        <td>内容/自动化</td>
+                        <td><strong style="color: var(--pro-pink);">1人</strong> 产出 <strong style="color: var(--pro-pink);">3-5人</strong> 的内容量</td>
+                        <td>摆脱杂务，专注高价值决策</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 90.90%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="10-solo-shop.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">11 / 12</div>
+        <a class="nav-btn " href="12-ending.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

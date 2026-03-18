@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大型企业 - 供应链与客服</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .scenario-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid;
+        }
+        .scenario-card:nth-child(1) {
+            border-color: rgba(6, 182, 212, 0.4);
+        }
+        .scenario-card:nth-child(2) {
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+        .scenario-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .scenario-card:nth-child(1) h3 {
+            color: var(--pro-cyan);
+        }
+        .scenario-card:nth-child(2) h3 {
+            color: var(--pro-yellow);
+        }
+        .case-info {
+            background: rgba(247, 147, 26, 0.1);
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .data-box {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 1.2rem;
+            border-radius: var(--radius-sm);
+            margin: 1rem 0;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .data-box p {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .metric {
+            display: inline-block;
+            background: var(--pro-orange);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            margin: 0 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h2><i class="fa-solid fa-building" style="color: var(--pro-orange); margin-right: 1rem;"></i>大型企业：更多场景</h2>
+
+        <div class="grid-2">
+            <div class="scenario-card">
+                <h3>场景二：全球供应链与预测性维护</h3>
+
+                <div class="case-info">
+                    <strong>真实案例：</strong>DHL / Amazon
+                </div>
+
+                <div class="data-box">
+                    <p><strong>落地数据：</strong>通过 AI 路径优化和需求预测，供应链透明度显著提升，预测性维护使设备故障减少了 <span class="metric">30%-50%</span>，物流成本降低约 <span class="metric">15%</span>。</p>
+                </div>
+            </div>
+
+            <div class="scenario-card">
+                <h3>场景三：超大规模客户服务</h3>
+
+                <div class="case-info">
+                    <strong>数据支撑：</strong>2025年调研显示，<span class="metric">80%</span> 的大型零售高管已实现 AI 自动化
+                </div>
+
+                <div class="data-box">
+                    <p><strong>提效点：</strong>智能路由分发（Routing），AI 先期过滤 <span class="metric">70%</span> 的常规咨询，人工仅处理高价值或复杂案件。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 27.27%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="03-enterprise-dev.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">4 / 12</div>
+        <a class="nav-btn " href="05-midmarket-marketing.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

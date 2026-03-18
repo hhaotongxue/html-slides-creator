@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各级企业AI提效对比</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.8rem;
+        }
+        .comparison-table thead th {
+            background: linear-gradient(135deg, var(--jelly-blue), var(--jelly-purple));
+            color: white;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: left;
+            border: none;
+        }
+        .comparison-table thead th:first-child {
+            border-radius: 12px 0 0 12px;
+        }
+        .comparison-table thead th:last-child {
+            border-radius: 0 12px 12px 0;
+        }
+        .comparison-table tbody tr {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+        }
+        .comparison-table tbody td {
+            padding: 1.2rem 1rem;
+            font-size: 1rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .comparison-table tbody td:first-child {
+            border-left: 1px solid var(--border-color);
+            border-radius: 12px 0 0 12px;
+            font-weight: 700;
+            color: var(--jelly-cyan);
+        }
+        .comparison-table tbody td:last-child {
+            border-right: 1px solid var(--border-color);
+            border-radius: 0 12px 12px 0;
+        }
+        .metric-highlight {
+            color: var(--jelly-pink);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1 class="halo-text">各级企业 AI 提效核心指标对比</h1>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>企业类型</th>
+                    <th>核心场景</th>
+                    <th>关键提效数据</th>
+                    <th>核心痛点解决</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>大型公司</td>
+                    <td>研发/供应链</td>
+                    <td>工程师效率 <span class="metric-highlight">+20%</span><br>成本降低 <span class="metric-highlight">15%</span></td>
+                    <td>打破部门墙<br>数据孤岛治理</td>
+                </tr>
+                <tr>
+                    <td>中型公司</td>
+                    <td>营销/HR</td>
+                    <td>营销速度 <span class="metric-highlight">+85%</span><br>收入提振明显</td>
+                    <td>解决专业人力不足</td>
+                </tr>
+                <tr>
+                    <td>小型企业</td>
+                    <td>跨境/财务</td>
+                    <td>每月节省 <span class="metric-highlight">20+小时</span><br><span class="metric-highlight">$500-$2000</span> 成本</td>
+                    <td>替代昂贵外包<br>低成本全球化</td>
+                </tr>
+                <tr>
+                    <td>个体户</td>
+                    <td>内容/自动化</td>
+                    <td>1人产出 <span class="metric-highlight">3-5人</span> 的内容量</td>
+                    <td>摆脱杂务<br>专注高价值决策</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 90.90%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="10-solo-global.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">11 / 12</div>
+        <a class="nav-btn" href="12-ending.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

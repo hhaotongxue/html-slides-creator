@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI对不同规模企业的提效应用</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cover-layout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            gap: 2rem;
+        }
+        .cover-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin: 0;
+        }
+        .cover-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+        .cover-badge {
+            display: inline-block;
+            background: var(--holographic-gradient);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="cover-layout">
+            <div class="cover-badge">2025-2026 实测数据</div>
+            <h1 class="cover-title halo-text">AI 对不同规模企业<br>的提效应用</h1>
+            <p class="cover-subtitle">从概念到量化指标的真实落地</p>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn disabled" href=""><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">01 / 12</div>
+        <a class="nav-btn" href="02-intro.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

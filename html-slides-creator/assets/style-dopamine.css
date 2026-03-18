@@ -92,14 +92,30 @@ body {
     border-radius: var(--candy-border-radius);
     box-shadow: 0 20px 60px rgba(165, 166, 246, 0.2), 0 0 0 1px rgba(255,255,255,0.5) inset;
     overflow: hidden;
-    padding: 4rem 5rem;
+    padding: 3rem 5rem;
     box-sizing: border-box;
     transform-origin: top center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 通用排版 */
 h1, h2, h3, h4 { margin: 0; font-weight: 800; letter-spacing: -0.03em; color: var(--dopa-text-main); }
-p { line-height: 1.7; color: var(--dopa-text-muted); }
+
+.canvas h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.canvas h2 {
+    font-size: 1.8rem;
+}
+
+.canvas h3 {
+    font-size: 1.4rem;
+}
+
+p { line-height: 1.7; color: var(--dopa-text-muted); font-size: 1rem; }
 
 .gradient-text-pink-purple {
     background: linear-gradient(135deg, var(--dopa-pink), var(--dopa-purple));
@@ -189,10 +205,11 @@ p { line-height: 1.7; color: var(--dopa-text-muted); }
 /* 卡片组件 */
 .card {
     background: var(--card-bg);
-    padding: var(--space-lg);
+    padding: 1.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     transition: all var(--duration-base);
+    flex-shrink: 1;
 }
 .card:hover {
     transform: translateY(-4px);
@@ -201,55 +218,59 @@ p { line-height: 1.7; color: var(--dopa-text-muted); }
 
 .icon-card {
     background: var(--card-bg);
-    padding: var(--space-lg);
+    padding: 1.5rem;
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-sm);
+    flex-shrink: 1;
 }
 .icon-card-icon {
-    font-size: 3rem;
-    margin-bottom: var(--space-md);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .highlight-card {
     position: relative;
     background: var(--card-bg);
-    padding: var(--space-lg);
+    padding: 1.5rem;
     border-radius: var(--radius-lg);
     border-left: 4px solid var(--accent-color);
     box-shadow: var(--shadow-sm);
+    flex-shrink: 1;
 }
 
 /* 引用与提示框 */
 .quote-box {
     background: var(--card-bg);
-    padding: var(--space-xl);
+    padding: 2rem;
     border-radius: var(--radius-lg);
     border-left: 6px solid var(--accent-color);
     font-style: italic;
     box-shadow: var(--shadow-sm);
+    flex-shrink: 1;
 }
 .quote-text {
-    font-size: var(--text-xl);
-    line-height: 1.8;
-    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 .quote-author {
-    font-size: var(--text-sm);
+    font-size: 0.9rem;
     color: var(--text-muted);
     font-style: normal;
 }
 
 .callout {
     display: flex;
-    gap: var(--space-md);
-    padding: var(--space-lg);
+    gap: 1rem;
+    padding: 1.2rem;
     border-radius: var(--radius-md);
     background: var(--card-bg);
     box-shadow: var(--shadow-sm);
+    flex-shrink: 1;
 }
 .callout-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
 }
 .callout-info { border-left: 4px solid #3b82f6; }
@@ -265,13 +286,13 @@ p { line-height: 1.7; color: var(--dopa-text-muted); }
 .icon-list li {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-sm) 0;
-    font-size: var(--text-base);
+    gap: 0.8rem;
+    padding: 0.6rem 0;
+    font-size: 1rem;
 }
 .icon-list i {
     color: var(--accent-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .numbered-list {
@@ -283,20 +304,21 @@ p { line-height: 1.7; color: var(--dopa-text-muted); }
     counter-increment: item;
     display: flex;
     align-items: flex-start;
-    gap: var(--space-md);
-    padding: var(--space-sm) 0;
+    gap: 1rem;
+    padding: 0.6rem 0;
 }
 .numbered-list li::before {
     content: counter(item);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     background: var(--accent-color);
     color: white;
     border-radius: 50%;
     font-weight: 700;
+    font-size: 0.85rem;
     flex-shrink: 0;
 }
 

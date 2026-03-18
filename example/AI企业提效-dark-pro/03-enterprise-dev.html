@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大型企业 - 研发效率</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+        .case-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid rgba(247, 147, 26, 0.3);
+        }
+        .case-title {
+            font-size: 1.8rem;
+            color: var(--pro-orange);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .case-label {
+            display: inline-block;
+            background: rgba(251, 191, 36, 0.2);
+            color: var(--pro-yellow);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .data-highlight {
+            background: rgba(247, 147, 26, 0.15);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin: 1rem 0;
+            border: 1px solid rgba(247, 147, 26, 0.3);
+        }
+        .data-highlight p {
+            margin: 0;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        .benefit-list {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .benefit-item {
+            flex: 1;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1><i class="fa-solid fa-building" style="color: var(--pro-orange); margin-right: 1rem;"></i>大型企业：深层系统集成</h1>
+        <p class="subtitle">侧重于将 AI 嵌入现有的复杂工作流，利用海量数据实现规模化提效</p>
+
+        <div class="case-card">
+            <div class="case-title">场景一：研发效率提升（代码协作）</div>
+
+            <div class="case-label">真实案例</div>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">J.P. Morgan Chase（摩根大通）</p>
+
+            <div class="data-highlight">
+                <p><strong>落地数据：</strong>部署 AI 编码助手后，数万名工程师的生产力提升了 <span class="text-highlight">10%-20%</span>。CEO Jamie Dimon 指出，AI 每年有望为公司创造约 <span class="text-highlight">$10亿-$15亿</span> 的商业价值。</p>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <strong style="color: var(--pro-cyan); font-size: 1.1rem;">提效点：</strong>
+                <div class="benefit-list">
+                    <div class="benefit-item">自动化代码审查</div>
+                    <div class="benefit-item">存量遗留代码重构</div>
+                    <div class="benefit-item">自动化单元测试</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 18.18%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="02-overview.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">3 / 12</div>
+        <a class="nav-btn " href="04-enterprise-supply.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

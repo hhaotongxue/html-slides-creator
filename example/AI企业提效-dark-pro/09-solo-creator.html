@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个体户 - 自媒体工作室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 关键：确保内容不溢出 */
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 5rem !important; /* 减小上下 padding */
+        }
+        .canvas h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        .quote-section {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(251, 191, 36, 0.15));
+            padding: 1.5rem;
+            border-radius: var(--radius-xl);
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        .main-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid rgba(236, 72, 153, 0.4);
+            flex-shrink: 1;
+        }
+        .card-title {
+            font-size: 1.6rem;
+            color: var(--pro-pink);
+            margin-bottom: 1.2rem;
+        }
+        .case-box {
+            background: rgba(251, 191, 36, 0.1);
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .case-box p {
+            margin: 0.4rem 0;
+            font-size: 1rem;
+        }
+        .highlight-value {
+            color: var(--pro-orange);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+        .benefit-card {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+        }
+        .benefit-card h4 {
+            color: var(--pro-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+        }
+        .benefit-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1><i class="fa-solid fa-user" style="color: var(--pro-pink); margin-right: 1rem;"></i>个体户/个人创作者：单兵作战的极限拉伸</h1>
+        <p class="subtitle">AI 是"数字员工团队"，让一个人能完成一个公司的活</p>
+
+        <div class="quote-section">
+            <p class="quote-text">"对个体户而言，AI 是数字员工团队"</p>
+        </div>
+
+        <div class="main-card">
+            <div class="card-title">场景一：一人自媒体/设计工作室</div>
+
+            <div class="case-box">
+                <p><strong>真实案例：</strong>设计师 Sarah Chen</p>
+                <p>仅利用 ChatGPT + Canva Pro + Zapier</p>
+                <p>在 2025 年实现了 <span class="highlight-value">$42万</span> 年收入</p>
+                <p>且每周仅工作 <span class="highlight-value">25小时</span></p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>🎬 一鱼多吃</h4>
+                    <p>将一个长视频自动切片成 10 个短视频（TikTok/Reels）</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>🤖 24/7 销售</h4>
+                    <p>部署 AI 客服插件，在博主睡觉时完成客户咨询和下单引导</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 72.72%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="08-small-finance.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">9 / 12</div>
+        <a class="nav-btn " href="10-solo-shop.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中型公司：营销自动化</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .section-icon { font-size: 2.5rem; }
+        .section-title { font-size: 2.8rem; font-weight: 900; }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+            backdrop-filter: blur(12px);
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 2px solid var(--jelly-blue);
+            margin-bottom: 2rem;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--jelly-pink);
+            text-shadow: 0 0 20px var(--jelly-pink);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-top: 0.5rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--jelly-blue);
+            margin-bottom: 0.8rem;
+        }
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h1 class="section-title">中型公司：营销自动化</h1>
+        </div>
+
+        <div class="highlight-box">
+            <div class="stat-row">
+                <div class="stat-item">
+                    <div class="stat-number">91%</div>
+                    <div class="stat-label">使用 AI 的中型企业<br>报告收入增长</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">营销活动执行<br>速度提升</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-dim); margin: 0;">
+                <i class="fa-solid fa-calendar"></i> 2025 年数据
+            </p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="feature-title">个性化营销邮件</div>
+                <p style="font-size: 1rem; color: var(--text-dim); margin: 0;">AI 生成定制化内容</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="feature-title">精准客户定位</div>
+                <p style="font-size: 1rem; color: var(--text-dim); margin: 0;">智能分析用户画像</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 36.36%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="04-enterprise-supply.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">05 / 12</div>
+        <a class="nav-btn" href="06-midmarket-quality.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

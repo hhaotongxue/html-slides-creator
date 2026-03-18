@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>概述</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .canvas h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .highlight-box {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        .highlight-box p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin: 0;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .category-tag {
+            background: var(--card-bg);
+            border: 2px solid;
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        .category-tag:nth-child(1) { border-color: var(--pro-orange); }
+        .category-tag:nth-child(2) { border-color: var(--pro-cyan); }
+        .category-tag:nth-child(3) { border-color: var(--pro-green); }
+        .category-tag:nth-child(4) { border-color: var(--pro-pink); }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1><span class="gradient-text-warm">AI 提效现状</span></h1>
+
+        <div class="highlight-box">
+            <p>基于最新的行业报告与 2025-2026 年的实测数据，AI 对不同规模企业的提效已从<span class="text-highlight">「概念」</span>转变为<span class="text-highlight">「量化指标」</span>。</p>
+        </div>
+
+        <div class="categories">
+            <div class="category-tag">
+                <i class="fa-solid fa-building" style="color: var(--pro-orange); margin-right: 0.5rem;"></i>
+                大型企业
+            </div>
+            <div class="category-tag">
+                <i class="fa-solid fa-chart-line" style="color: var(--pro-cyan); margin-right: 0.5rem;"></i>
+                中型公司
+            </div>
+            <div class="category-tag">
+                <i class="fa-solid fa-store" style="color: var(--pro-green); margin-right: 0.5rem;"></i>
+                小型企业
+            </div>
+            <div class="category-tag">
+                <i class="fa-solid fa-user" style="color: var(--pro-pink); margin-right: 0.5rem;"></i>
+                个体户
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 9.09%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="01-cover.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">2 / 12</div>
+        <a class="nav-btn " href="03-enterprise-dev.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

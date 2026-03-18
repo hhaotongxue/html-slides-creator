@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中型公司：智能制造</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .section-icon { font-size: 2.5rem; }
+        .section-title { font-size: 2.8rem; font-weight: 900; }
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 5rem);
+            gap: 2.5rem;
+        }
+        .main-metric {
+            text-align: center;
+        }
+        .metric-title {
+            font-size: 1.5rem;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+        .metric-huge {
+            font-size: 5rem;
+            font-weight: 900;
+            background: var(--holographic-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .metric-desc {
+            font-size: 1.3rem;
+            color: var(--text-light);
+        }
+        .sub-metrics {
+            display: flex;
+            gap: 3rem;
+        }
+        .sub-metric {
+            text-align: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+        .sub-value {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--jelly-cyan);
+            text-shadow: 0 0 20px var(--jelly-cyan);
+        }
+        .sub-label {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-industry"></i></div>
+            <h1 class="section-title">中型公司：智能制造</h1>
+        </div>
+
+        <div class="center-content">
+            <div class="main-metric">
+                <div class="metric-title">AI 视觉检测缺陷识别准确率</div>
+                <div class="metric-huge">98%-99.5%</div>
+                <div class="metric-desc">制造领域的中小型企业</div>
+            </div>
+
+            <div class="sub-metrics">
+                <div class="sub-metric">
+                    <div class="sub-value">80%+</div>
+                    <div class="sub-label">生产调度<br>效率提升</div>
+                </div>
+                <div class="sub-metric">
+                    <div class="sub-value"><i class="fa-solid fa-robot"></i></div>
+                    <div class="sub-label">质量控制<br>自动化</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 45.45%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="05-midmarket-marketing.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">06 / 12</div>
+        <a class="nav-btn" href="07-small-ecommerce.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

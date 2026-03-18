@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从概念到量化指标</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quote-layout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            gap: 3rem;
+        }
+        .big-quote {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.4;
+            text-align: center;
+            color: #fff;
+        }
+        .source-tag {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="quote-layout">
+            <div class="big-quote">
+                AI 对企业的提效已从<br>
+                <span class="halo-text">"概念"</span> 转变为 <span class="halo-text">"量化指标"</span>
+            </div>
+            <div class="source-tag">
+                <i class="fa-solid fa-chart-line"></i> 基于 2025-2026 年行业报告与实测数据
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 9.09%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="01-cover.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">02 / 12</div>
+        <a class="nav-btn" href="03-enterprise-dev.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结束页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2.5rem;
+        }
+        .ending-icon {
+            font-size: 5rem;
+        }
+        .ending-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin: 0;
+        }
+        .ending-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+        .divider {
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--pro-orange), var(--pro-pink), transparent);
+        }
+        .footer-text {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="ending-icon">🎯</div>
+        <h1 class="ending-title">
+            <span class="gradient-text-warm">AI 提效时代</span><br>
+            已经到来
+        </h1>
+        <div class="divider"></div>
+        <p class="ending-subtitle">从概念到量化，从试点到规模化</p>
+        <p class="footer-text">感谢观看 | 2025-2026</p>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 100%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="11-summary.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">12 / 12</div>
+        <a class="nav-btn disabled" href=""><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

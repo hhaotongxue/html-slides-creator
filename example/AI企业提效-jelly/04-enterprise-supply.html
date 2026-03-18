@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大型企业：供应链优化</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .section-icon { font-size: 2.5rem; }
+        .section-title { font-size: 2.8rem; font-weight: 900; }
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: calc(100% - 5rem);
+        }
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .company-tag {
+            display: inline-block;
+            background: var(--jelly-purple);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+        .scenario-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .metric-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 1.8rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-dim);
+            margin-bottom: 0.8rem;
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--jelly-cyan);
+            text-shadow: 0 0 15px var(--jelly-cyan);
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h1 class="section-title">大型企业：供应链优化</h1>
+        </div>
+
+        <div class="split-layout">
+            <div class="left-panel">
+                <div>
+                    <span class="company-tag">DHL / Amazon</span>
+                </div>
+                <h2 class="scenario-title">全球供应链与<br>预测性维护</h2>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dim);">
+                    通过 AI 路径优化和需求预测，供应链透明度显著提升，预测性维护使设备故障大幅减少
+                </p>
+            </div>
+
+            <div class="right-panel">
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-wrench"></i> 设备故障减少</div>
+                    <div class="metric-value">30%-50%</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-dollar-sign"></i> 物流成本降低</div>
+                    <div class="metric-value">~15%</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label"><i class="fa-solid fa-eye"></i> 供应链透明度</div>
+                    <div class="metric-value" style="font-size: 2rem;">显著提升</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 27.27%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="03-enterprise-dev.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">04 / 12</div>
+        <a class="nav-btn" href="05-midmarket-marketing.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小型企业 - 跨境电商</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 关键：确保内容不溢出 */
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 5rem !important; /* 减小上下 padding */
+        }
+        .canvas h1 {
+            font-size: 2.5rem; /* 减小标题 */
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem; /* 减小间距 */
+        }
+        .featured-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--pro-yellow), var(--pro-orange));
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .main-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2rem; /* 减小 padding */
+            border-radius: var(--radius-xl);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            flex-shrink: 1; /* 允许压缩 */
+        }
+        .card-title {
+            font-size: 1.6rem; /* 减小字号 */
+            color: var(--pro-green);
+            margin-bottom: 1rem;
+        }
+        .case-label {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.2);
+            color: var(--pro-cyan);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        .data-section {
+            background: rgba(251, 191, 36, 0.1);
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+            margin: 1rem 0;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .data-section p {
+            margin: 0.4rem 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .highlight-stat {
+            color: var(--pro-orange);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .tools-box {
+            background: rgba(6, 182, 212, 0.1);
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+            margin-top: 1rem;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        .tools-box strong {
+            color: var(--pro-cyan);
+            font-size: 1rem;
+        }
+        .tools-box {
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1><i class="fa-solid fa-store" style="color: var(--pro-green); margin-right: 1rem;"></i>小型企业：降本增效与跨国业务</h1>
+        <p class="subtitle">主要利用 AI 替代昂贵的第三方外包服务</p>
+
+        <div class="featured-badge">
+            <i class="fa-solid fa-star" style="margin-right: 0.5rem;"></i>核心推荐
+        </div>
+
+        <div class="main-card">
+            <div class="card-title">场景一：跨境电商（Cross-Border E-commerce）</div>
+
+            <div class="case-label">真实案例</div>
+            <p style="font-size: 1rem; margin-bottom: 0.8rem;">小型外贸团队使用 AI 进行多语言客服与 Listing 优化</p>
+
+            <div class="data-section">
+                <p><strong>落地数据：</strong></p>
+                <p>• 全球电商转化率在 2025 年达到 <span class="highlight-stat">3.34%</span>（AI 驱动显著）</p>
+                <p>• 小型企业通过 AI 处理报关单据、当地法律合规检查</p>
+                <p>• 每人每月平均节省 <span class="highlight-stat">20小时</span> 以上</p>
+            </div>
+
+            <div class="tools-box">
+                <strong>提效工具：</strong>使用 DeepL / GPT-4o 进行精准翻译与文化本地化润色
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 54.54%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn " href="06-midmarket-hr.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">7 / 12</div>
+        <a class="nav-btn " href="08-small-finance.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

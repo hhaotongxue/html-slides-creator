@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个体户：一人自媒体</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .section-icon { font-size: 2.5rem; }
+        .section-title { font-size: 2.8rem; font-weight: 900; }
+        .case-highlight {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2));
+            backdrop-filter: blur(12px);
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 2px solid var(--jelly-pink);
+            margin-bottom: 2rem;
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
+        }
+        .case-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--jelly-pink);
+            margin-bottom: 1rem;
+        }
+        .case-stats {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        .case-stat {
+            text-align: center;
+        }
+        .case-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--jelly-cyan);
+            text-shadow: 0 0 20px var(--jelly-cyan);
+            line-height: 1;
+        }
+        .case-label {
+            font-size: 1rem;
+            color: var(--text-dim);
+            margin-top: 0.5rem;
+        }
+        .tools-row {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .tool-card {
+            flex: 1;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        .tool-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+        .tool-desc {
+            font-size: 1rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+            <h1 class="section-title">个体户：一人自媒体</h1>
+        </div>
+
+        <div class="case-highlight">
+            <div class="case-name"><i class="fa-solid fa-star"></i> 真实案例：设计师 Sarah Chen</div>
+            <p style="font-size: 1.2rem; color: var(--text-light); line-height: 1.8; margin-bottom: 0;">
+                仅利用 ChatGPT + Canva Pro + Zapier
+            </p>
+            <div class="case-stats">
+                <div class="case-stat">
+                    <div class="case-number">$42万</div>
+                    <div class="case-label">2025年收入</div>
+                </div>
+                <div class="case-stat">
+                    <div class="case-number">25h</div>
+                    <div class="case-label">每周工作时长</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-row">
+            <div class="tool-card">
+                <div class="tool-title"><i class="fa-solid fa-scissors"></i> 一鱼多吃</div>
+                <div class="tool-desc">将一个长视频自动切片成 10 个短视频</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><i class="fa-solid fa-clock"></i> 24/7 销售</div>
+                <div class="tool-desc">AI 客服在睡觉时完成咨询和下单引导</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 72.72%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="08-small-finance.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">09 / 12</div>
+        <a class="nav-btn" href="10-solo-global.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>

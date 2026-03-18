@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大型企业：研发效率提升</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .section-icon {
+            font-size: 2.5rem;
+        }
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+        }
+        .case-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+        .case-label {
+            color: var(--jelly-cyan);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .case-company {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1.2rem;
+        }
+        .metric-highlight {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--jelly-blue);
+            text-shadow: 0 0 20px var(--jelly-blue);
+        }
+        .benefit-list {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .benefit-item {
+            flex: 1;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            text-align: center;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-building"></i></div>
+            <h1 class="section-title">大型企业：研发效率提升</h1>
+        </div>
+
+        <div class="case-card">
+            <div class="case-label">真实案例</div>
+            <div class="case-company">J.P. Morgan Chase（摩根大通）</div>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dim); margin-bottom: 1.5rem;">
+                部署 AI 编码助手后，数万名工程师的生产力提升了 <span class="metric-highlight">10%-20%</span>
+            </p>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-dim);">
+                CEO Jamie Dimon 指出，AI 每年有望为公司创造约 <span class="text-highlight">$10亿-$15亿</span> 的商业价值
+            </p>
+        </div>
+
+        <div class="benefit-list">
+            <div class="benefit-item">
+                <i class="fa-solid fa-code" style="font-size: 1.5rem; color: var(--jelly-blue); margin-bottom: 0.5rem;"></i>
+                <div>自动化代码审查</div>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-rotate" style="font-size: 1.5rem; color: var(--jelly-blue); margin-bottom: 0.5rem;"></i>
+                <div>遗留代码重构</div>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-vial" style="font-size: 1.5rem; color: var(--jelly-blue); margin-bottom: 0.5rem;"></i>
+                <div>自动化单元测试</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 18.18%;"></div>
+    </div>
+
+    <div class="controls-container">
+        <a class="nav-btn" href="02-intro.html"><i class="fa-solid fa-chevron-left"></i></a>
+        <div class="slide-counter">03 / 12</div>
+        <a class="nav-btn" href="04-enterprise-supply.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <script src="scale.js"></script>
+</body>
+</html>
