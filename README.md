@@ -30,7 +30,7 @@
 1. 克隆本仓库：
 
 ```bash
-git clone https://github.com/你的用户名/html-slides-creator.git
+git clone https://github.com/hhaotongxue/html-slides-creator.git
 ```
 
 2. 将 `html-slides-creator` 文件夹复制到 Claude Code 的 skills 目录中。
