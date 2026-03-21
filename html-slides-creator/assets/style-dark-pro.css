@@ -159,6 +159,7 @@ p {
     font-size: 1.05rem;
     line-height: 1.6;
     box-shadow: var(--shadow-sm);
+    white-space: pre;
 }
 .code-keyword { color: #c084fc; font-weight: 600; }
 .code-string { color: #6ee7b7; }

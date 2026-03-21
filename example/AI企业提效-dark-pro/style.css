@@ -100,9 +100,11 @@ body {
     box-shadow: var(--shadow-xl);
     border-radius: var(--canvas-radius);
     overflow: hidden;
-    padding: 4rem 5rem;
+    padding: 3rem 5rem; /* 减小上下 padding 防止溢出 */
     box-sizing: border-box;
     transform-origin: top center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 通用排版 */
@@ -113,10 +115,24 @@ h1, h2, h3, h4 {
     color: var(--text-light);
 }
 
+/* 防溢出：减小标题字号 */
+.canvas h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.canvas h2 {
+    font-size: 1.8rem;
+}
+
+.canvas h3 {
+    font-size: 1.4rem;
+}
+
 p {
     line-height: 1.7;
     color: var(--text-dim);
-    font-size: 1.1rem;
+    font-size: 1rem; /* 从 1.1rem 减小到 1rem */
 }
 
 /* 渐变文字 - 克制使用 */
@@ -143,6 +159,7 @@ p {
     font-size: 1.05rem;
     line-height: 1.6;
     box-shadow: var(--shadow-sm);
+    white-space: pre;
 }
 .code-keyword { color: #c084fc; font-weight: 600; }
 .code-string { color: #6ee7b7; }
@@ -239,11 +256,12 @@ p {
 .card {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    padding: var(--space-lg);
+    padding: 1.5rem; /* 从 2rem 减小到 1.5rem */
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
     transition: all var(--duration-base);
+    flex-shrink: 1; /* 允许压缩 */
 }
 .card:hover {
     transform: translateY(-2px);
@@ -254,58 +272,62 @@ p {
 .icon-card {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    padding: var(--space-lg);
+    padding: 1.5rem; /* 从 2rem 减小 */
     border-radius: var(--radius-lg);
     text-align: center;
     border: 1px solid var(--border-color);
+    flex-shrink: 1;
 }
 .icon-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--space-md);
+    font-size: 2rem; /* 从 2.5rem 减小 */
+    margin-bottom: 1rem; /* 从 1.5rem 减小 */
 }
 
 .highlight-card {
     position: relative;
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    padding: var(--space-lg);
+    padding: 1.5rem; /* 从 2rem 减小 */
     border-radius: var(--radius-lg);
     border-left: 3px solid var(--accent-color);
     box-shadow: var(--shadow-sm);
+    flex-shrink: 1;
 }
 
 /* 引用与提示框 */
 .quote-box {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    padding: var(--space-xl);
+    padding: 2rem; /* 从 3rem 减小 */
     border-radius: var(--radius-lg);
     border-left: 4px solid var(--accent-color);
     font-style: italic;
+    flex-shrink: 1;
 }
 .quote-text {
-    font-size: var(--text-xl);
-    line-height: 1.7;
-    margin-bottom: var(--space-md);
+    font-size: 1.5rem; /* 从 2rem 减小 */
+    line-height: 1.6; /* 从 1.7 减小 */
+    margin-bottom: 1rem; /* 从 1.5rem 减小 */
     color: var(--text-light);
 }
 .quote-author {
-    font-size: var(--text-sm);
+    font-size: 0.9rem; /* 从 1rem 减小 */
     color: var(--text-muted);
     font-style: normal;
 }
 
 .callout {
     display: flex;
-    gap: var(--space-md);
-    padding: var(--space-lg);
+    gap: 1rem; /* 从 1.5rem 减小 */
+    padding: 1.2rem; /* 从 2rem 减小 */
     border-radius: var(--radius-md);
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
+    flex-shrink: 1;
 }
 .callout-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* 从 1.5rem 减小 */
     flex-shrink: 0;
 }
 .callout-info { border-left: 3px solid var(--pro-blue); }
@@ -321,13 +343,13 @@ p {
 .icon-list li {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-sm) 0;
-    font-size: var(--text-base);
+    gap: 0.8rem; /* 从 1rem 减小 */
+    padding: 0.6rem 0; /* 从 1rem 减小 */
+    font-size: 1rem; /* 从 1.125rem 减小 */
 }
 .icon-list i {
     color: var(--accent-color);
-    font-size: 1.1rem;
+    font-size: 1rem; /* 从 1.1rem 减小 */
 }
 
 .numbered-list {
@@ -339,21 +361,21 @@ p {
     counter-increment: item;
     display: flex;
     align-items: flex-start;
-    gap: var(--space-md);
-    padding: var(--space-sm) 0;
+    gap: 1rem; /* 从 1.5rem 减小 */
+    padding: 0.6rem 0; /* 从 1rem 减小 */
 }
 .numbered-list li::before {
     content: counter(item);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem; /* 从 1.8rem 减小 */
+    height: 1.6rem;
     background: var(--accent-color);
     color: white;
     border-radius: 50%;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* 从 0.9rem 减小 */
     flex-shrink: 0;
 }
 

@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d6f57b0-9f4d-4eed-b428-0e0a4fa0d6e8" name="Changes" comment="" />
+    <list default="true" id="7d6f57b0-9f4d-4eed-b428-0e0a4fa0d6e8" name="Changes" comment="丰富幻灯片布局和样式">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/AI企业提效-dark-pro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/example/AI企业提效-dark-pro/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/AI企业提效-jelly/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/example/AI企业提效-jelly/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/claude-notification-dopamine/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/example/claude-notification-dopamine/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html-slides-creator/SKILL.md" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/SKILL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html-slides-creator/assets/style-dark-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/assets/style-dark-pro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html-slides-creator/assets/style-jelly.css" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/assets/style-jelly.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html-slides-creator/assets/style-macaron.css" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/assets/style-macaron.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hhaotongxue&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hhaotongxue/html-slides-creator.git&quot;,
+    &quot;accountId&quot;: &quot;b1542181-0b52-48a8-9097-de6403fe5423&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -23,7 +44,9 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "last_opened_file_path": "/Volumes/lianshu/code/my-open-source/html-slides-creator/example",
     "nodejs_package_manager_path": "npm",
@@ -53,11 +76,42 @@
       <option name="presentableId" value="Default" />
       <updated>1773799010152</updated>
       <workItem from="1773799011176" duration="2653000" />
-      <workItem from="1773801681236" duration="503000" />
+      <workItem from="1773801681236" duration="20581000" />
+      <workItem from="1774088122564" duration="3169000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1773802735026</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773802735026</updated>
+    </task>
+    <task id="LOCAL-00002" summary="丰富幻灯片布局和样式">
+      <option name="closed" value="true" />
+      <created>1773803755953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773803755953</updated>
+    </task>
+    <task id="LOCAL-00003" summary="丰富幻灯片布局和样式">
+      <option name="closed" value="true" />
+      <created>1773818951314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773818951314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <MESSAGE value="丰富幻灯片布局和样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="丰富幻灯片布局和样式" />
   </component>
 </project>
