@@ -6,26 +6,16 @@
 
 每张幻灯片是独立的 HTML 文件，双击即可在浏览器中打开，支持左右箭头导航、进度条显示。
 
-### 三种视觉风格
+### 四种视觉风格
 
 | 风格 | 特点 | 适用场景 |
 |------|------|---------|
 | **Dopamine（多巴胺）** | 明亮清新、色彩缤纷 | 轻松愉悦、教学类 |
 | **Jelly（果冻弥散光）** | 深色背景、毛玻璃效果 | 科技感、未来感 |
 | **Macaron（马卡龙）** | 低饱和度、柔和甜美 | 设计、创意类 |
+| **Dark Pro（深色专业版）** | 纯黑高对比、克制强调色 | 技术分享、专业内容 |
 
 ## 安装方式
-
-### 方式一：通过 .skill 文件安装（推荐）
-
-1. 下载 [html-slides-creator.skill](https://github.com/你的用户名/html-slides-creator/releases) 文件
-2. 在 Claude Code 中运行：
-
-```
-/install-skill html-slides-creator.skill
-```
-
-### 方式二：手动安装
 
 1. 克隆本仓库：
 
@@ -88,6 +78,7 @@ html-slides-creator/
 │   ├── style-dopamine.css  ← 多巴胺风格样式
 │   ├── style-jelly.css     ← 果冻弥散光风格样式
 │   ├── style-macaron.css   ← 马卡龙风格样式
+│   ├── style-dark-pro.css  ← 深色专业版风格样式
 │   └── template.html       ← HTML 页面模板
 └── references/
     ├── layouts.md          ← 布局模式参考

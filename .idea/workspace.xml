@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d6f57b0-9f4d-4eed-b428-0e0a4fa0d6e8" name="Changes" comment="丰富幻灯片布局和样式">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/AI企业提效-dark-pro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/example/AI企业提效-dark-pro/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/AI企业提效-jelly/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/example/AI企业提效-jelly/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/claude-notification-dopamine/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/example/claude-notification-dopamine/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html-slides-creator/SKILL.md" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/SKILL.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html-slides-creator/assets/style-dark-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/assets/style-dark-pro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html-slides-creator/assets/style-jelly.css" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/assets/style-jelly.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html-slides-creator/assets/style-macaron.css" beforeDir="false" afterPath="$PROJECT_DIR$/html-slides-creator/assets/style-macaron.css" afterDir="false" />
-    </list>
+    <list default="true" id="7d6f57b0-9f4d-4eed-b428-0e0a4fa0d6e8" name="Changes" comment="丰富幻灯片布局和样式" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +68,7 @@
       <updated>1773799010152</updated>
       <workItem from="1773799011176" duration="2653000" />
       <workItem from="1773801681236" duration="20581000" />
-      <workItem from="1774088122564" duration="3169000" />
+      <workItem from="1774088122564" duration="3647000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -103,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773818951314</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="丰富幻灯片布局和样式">
+      <option name="closed" value="true" />
+      <created>1774096497950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774096497950</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
